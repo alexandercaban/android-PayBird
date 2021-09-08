@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCreditItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:longClickable="true"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/tvCreditInfo_CreatedDate"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/tvCreditInfo_Code"
+        android:text="XX/XX/XXXX"
+        android:textColor="@color/indigoblue_accent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_Code"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="XXXX"
+        android:textColor="@color/indigoblue_accent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_RemainderLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvCreditInfo_Remainder"
+        android:layout_alignTop="@id/tvCreditInfo_Remainder"
+        android:layout_below="@id/tvCreditInfo_CreatedDate"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_Remainder"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/progressbar_height"
+        android:text="@string/todaypayments_remainder_label"
+        android:textAlignment="gravity"
+        android:textColor="@color/indigoblue_secondary_text" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_Remainder"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvCreditInfo_CreatedDate"
+        android:text="$ X.XXX" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_CreditValueLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_Remainder"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_CreditValue"
+        android:text="@string/todaypayments_creditvalue_label"
+        android:textColor="@color/indigoblue_secondary_text" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_CreditValue"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvCreditInfo_Remainder"
+        android:text="$ X.XXX" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_InstallmentTrackerLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_CreditValue"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_InstallmentTracker"
+        android:text="@string/todaypayments_installmenttracker_label"
+        android:textColor="@color/indigoblue_secondary_text" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_InstallmentTracker"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvCreditInfo_CreditValue"
+        android:text="X" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_Interest"
+        android:text="@string/creditinfo_interest"
+        android:textColor="@color/indigoblue_secondary_text"
+        android:textSize="@dimen/text_tiny" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_Interest"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/flCreditInfo_FooterDiv1"
+        android:text="XX"
+        android:textSize="@dimen/text_tiny" />
+
+    <FrameLayout
+        android:id="@+id/flCreditInfo_FooterDiv1"
+        android:layout_width="@dimen/divider"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvCreditInfo_Interest"
+        android:layout_alignTop="@+id/tvCreditInfo_Interest"
+        android:layout_below="@+id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_PeriodLabel"
+        android:background="@color/indigoblue_divider"
+        android:textSize="@dimen/text_tiny" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_PeriodLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_Period"
+        android:text="@string/creditinfo_period"
+        android:textColor="@color/indigoblue_secondary_text"
+        android:textSize="@dimen/text_tiny" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_Period"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/flCreditInfo_FooterDiv2"
+        android:text="XXXXXX"
+        android:textSize="@dimen/text_tiny" />
+
+    <FrameLayout
+        android:id="@+id/flCreditInfo_FooterDiv2"
+        android:layout_width="@dimen/divider"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvCreditInfo_Interest"
+        android:layout_alignTop="@+id/tvCreditInfo_Interest"
+        android:layout_below="@+id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_LastPaymentLabel"
+        android:background="@color/indigoblue_divider" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_LastPaymentLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:layout_toStartOf="@+id/tvCreditInfo_LastPayment"
+        android:text="@string/creditinfo_lastpayment"
+        android:textColor="@color/indigoblue_secondary_text"
+        android:textSize="@dimen/text_tiny" />
+
+    <TextView
+        android:id="@+id/tvCreditInfo_LastPayment"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvCreditInfo_InstallmentTracker"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:text="XX/XX/XXXX"
+        android:textSize="@dimen/text_tiny" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_below="@+id/tvCreditInfo_LastPayment"
+        android:layout_marginTop="@dimen/minimal_padding"
+        android:background="@color/indigoblue_divider" />
+
+</RelativeLayout>

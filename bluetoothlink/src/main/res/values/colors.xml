@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="indigoblue_primary">#3F51B5</color>
+    <color name="indigoblue_primary_dark">#303F9F</color>
+    <color name="indigoblue_primary_light">#C5CAE9</color>
+    <color name="indigoblue_accent">#448AFF</color>
+    <color name="indigoblue_accent_alter">#4e7ac2</color>
+    <color name="indigoblue_primary_text">#212121</color>
+    <color name="indigoblue_secondary_text">#757575</color>
+    <color name="indigoblue_icons">#FFFFFF</color>
+    <color name="indigoblue_divider">#BDBDBD</color>
+    <color name="indigoblue_loading_background">#50ffffff</color>
+    <color name="background_light">#efebe9</color>
+
+    <color name="drawer_background_start">#ffffff</color>
+    <color name="drawer_background_center">#eaeaea</color>
+    <color name="drawer_background_end">#d4d4d4</color>
+
+    <color name="indigoblue_accent_red">#FF5252</color>
+
+</resources>

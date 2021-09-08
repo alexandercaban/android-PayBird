@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- IndigoBlue Theme. -->
+    <style name="IndigoBlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/indigoblue_primary</item>
+        <item name="colorPrimaryDark">@color/indigoblue_primary_dark</item>
+        <item name="colorAccent">@color/indigoblue_accent</item>
+    </style>
+
+    <style name="IndigoBlueTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="IndigoBlueTheme.NoActionBarMain">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="IndigoBlueTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="IndigoBlueTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="IndigoBlueTheme.TextShadowEffect">
+        <item name="android:textColor">@color/indigoblue_primary_dark</item>
+        <item name="android:shadowColor">@color/indigoblue_icons</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+
+</resources>

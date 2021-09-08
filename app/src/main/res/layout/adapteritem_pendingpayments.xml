@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvTodayPaymentItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/cardview_elevation_high"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:longClickable="true"
+    tools:context=".view.adapter.PendingPaymentAdapter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/tvTodayPayment_Customer"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvTodayPayment_CreditCode"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="Dirección"
+            android:textColor="@color/indigoblue_accent" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_CreditCode"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_Customer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvTodayPayment_Customer"
+            android:gravity="center_vertical"
+            android:text="Crédito"
+            android:textAlignment="gravity"
+            android:textColor="@color/indigoblue_accent" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_Address"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTodayPayment_Customer"
+            android:text="Cliente" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_CreditValueLabel"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_CreditValue"
+            android:layout_alignTop="@+id/tvTodayPayment_CreditValue"
+            android:layout_below="@+id/tvTodayPayment_Address"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_CreditValue"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/progressbar_height"
+            android:text="@string/todaypayments_creditvalue_label"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_CreditValue"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvTodayPayment_Customer"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:text="$ 0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/indigoblue_primary_text" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_RemainderLabel"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_Remainder"
+            android:layout_alignTop="@+id/tvTodayPayment_Remainder"
+            android:layout_below="@id/tvTodayPayment_CreditValue"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_Remainder"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/cardview_corner_radio"
+            android:text="@string/todaypayments_remainder_label"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_Remainder"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTodayPayment_CreditValue"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/flTodayPayment_Div1"
+            android:text="$ 0" />
+
+        <FrameLayout
+            android:id="@+id/flTodayPayment_Div1"
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_PaymentValueLabel"
+            android:layout_alignTop="@+id/tvTodayPayment_PaymentValueLabel"
+            android:layout_below="@+id/tvTodayPayment_CreditValue"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_PaymentValueLabel"
+            android:background="@color/indigoblue_divider" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_PaymentValueLabel"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_PaymentValue"
+            android:layout_alignTop="@+id/tvTodayPayment_PaymentValue"
+            android:layout_below="@id/tvTodayPayment_CreditValue"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_PaymentValue"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/cardview_corner_radio"
+            android:text="@string/todaypayments_paymentvalue_label"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_PaymentValue"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tvTodayPayment_CreditValue"
+            android:text="$ 0"
+            android:textAlignment="textEnd" />
+
+        <FrameLayout
+            android:id="@+id/flTodayPayment_Div2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_below="@+id/tvTodayPayment_PaymentValue"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:background="@color/indigoblue_divider" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_LastPayment"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/flTodayPayment_Div3"
+            android:layout_alignBottom="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_alignTop="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_below="@+id/flTodayPayment_Div2"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:gravity="bottom"
+            android:text="Ultimo pago"
+            android:textAlignment="gravity" />
+
+        <FrameLayout
+            android:id="@+id/flTodayPayment_Div3"
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_alignTop="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_below="@+id/flTodayPayment_Div2"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_InstallmentTrackerLabel"
+            android:background="@color/indigoblue_divider" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_InstallmentTrackerLabel"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_alignTop="@+id/tvTodayPayment_InstallmentTracker"
+            android:layout_below="@+id/flTodayPayment_Div2"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/tvTodayPayment_InstallmentTracker"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/cardview_corner_radio"
+            android:text="@string/todaypayments_installmenttracker_label"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/tvTodayPayment_InstallmentTracker"
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/flTodayPayment_Div2"
+            android:text="0"
+            android:textAlignment="textEnd" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

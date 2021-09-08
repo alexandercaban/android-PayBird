@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/progressbar_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:foreground="@color/indigoblue_primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:text="@string/creditmanagement_customer_title"
+            android:textAlignment="center" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <Button
+                    android:id="@+id/btnCreditMng_PickACustomer"
+                    style="@style/Base.Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fab_size"
+                    android:text="@string/creditmanagement_select_customer" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCreditMng_CustomerSelectedPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvCreditMng_Customer"
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/btnCreditMng_CustomerInfo"
+                        android:layout_alignTop="@+id/btnCreditMng_CustomerInfo"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/btnCreditMng_CustomerInfo"
+                        android:drawablePadding="@dimen/minimal_padding"
+                        android:drawableStart="@drawable/ic_person_black_24dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Cliente"
+                        android:textAlignment="gravity" />
+
+                    <ImageButton
+                        android:id="@+id/btnCreditMng_CustomerInfo"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_toStartOf="@+id/btnCreditMng_CreateCredit"
+                        android:src="@drawable/ic_info_outline_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnCreditMng_CreateCredit"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_add_black_24dp"
+                        android:tint="@color/indigoblue_icons" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/progressbar_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:foreground="@color/indigoblue_accent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:text="@string/creditmanagement_credits_title"
+            android:textAlignment="center" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlCreditMng_NoCustomerSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvCreditMng_NO_CUSTOMER_SELECTED"
+                        android:layout_centerHorizontal="true"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/ic_person_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvCreditMng_NO_CUSTOMER_SELECTED"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/creditmanagement_no_customer_selected"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCreditMng_NO_CREDITS_FOUND"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvCreditMng_NO_CREDITS_FOUND"
+                        android:layout_centerHorizontal="true"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/ic_error_outline_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvCreditMng_NO_CREDITS_FOUND"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/creditmanagement_no_credits_found"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCreditMng_CustomerCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

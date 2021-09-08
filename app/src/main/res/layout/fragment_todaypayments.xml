@@ -1,0 +1,233 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context="com.cristiancollazos.paybird.view.fragment.TodayPaymentsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlTodayPayments_Subheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnTodayPayments_FilterByCreditCode"
+            android:layout_alignTop="@id/btnTodayPayments_FilterByCreditCode"
+            android:layout_toStartOf="@id/btnTodayPayments_FilterByCreditCode"
+            android:gravity="center_vertical"
+            android:text="@string/pendingcredits_filtes"
+            android:textAlignment="gravity"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnTodayPayments_FilterByCreditCode"
+            android:layout_alignTop="@+id/btnTodayPayments_FilterByCreditCode"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:layout_toStartOf="@id/btnTodayPayments_FilterByCreditCode"
+            android:background="@color/indigoblue_divider" />
+
+        <ImageButton
+            android:id="@+id/btnTodayPayments_FilterByCreditCode"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnTodayPayments_FilterByCustomer"
+            android:src="@drawable/ic_local_atm_gray_24dp" />
+
+        <FrameLayout
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnTodayPayments_FilterByCreditCode"
+            android:layout_alignTop="@+id/btnTodayPayments_FilterByCreditCode"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:layout_toStartOf="@id/btnTodayPayments_FilterByCustomer"
+            android:background="@color/indigoblue_divider" />
+
+        <ImageButton
+            android:id="@+id/btnTodayPayments_FilterByCustomer"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_people_gray_24dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_below="@+id/btnTodayPayments_FilterByCreditCode"
+            android:background="@color/indigoblue_divider"
+            android:layout_marginTop="@dimen/cardview_corner_radio"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPayments_Subheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTodayPayments_Subheader"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio">
+
+        <TextView
+            android:id="@+id/tvPayment_PaymentType"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_toStartOf="@+id/flPayment_Subheader_Divider"
+            android:text="SubHeader"
+            android:textAlignment="center"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/flPayment_Subheader_Divider"
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvPayments_Date"
+            android:layout_alignTop="@+id/tvPayments_Date"
+            android:layout_marginBottom="@dimen/divider"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:layout_toStartOf="@+id/tvPayments_Date"
+            android:background="@color/indigoblue_icons" />
+
+        <TextView
+            android:id="@+id/tvPayments_Date"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="SubHeader"
+            android:textColor="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srvTodayPayments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlPayments_Subheader">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTodayPayments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/fab_size_plus_margin" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvMovements"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/fab_size_plus_margin" />
+
+            <RelativeLayout
+                android:id="@+id/rlTodayPayments_NO_DATA_FOUND"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivTodayPayments_NO_DATA_FOUND"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvTodayPayments_NO_DATA_FOUND"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/ic_error_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvTodayPayments_NO_DATA_FOUND"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/todaypayments_pending_nodatafound"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMovements_NO_DATA_FOUND"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivMovements_NO_DATA_FOUND"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvMovements_NO_DATA_FOUND"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/ic_error_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvMovements_NO_DATA_FOUND"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/todaypayments_done_nodatafound"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnPayments_GoDoPayment"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_local_atm_white_24dp"
+        app:tooltipText="@string/payments_gotodo" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnPayments_GoNullPayment"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_clear_white_24dp"
+        app:backgroundTint="@color/indigoblue_accent_red"
+        app:tooltipText="@string/payments_gotonull" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menItm_drwLyt_routes"
+        android:enabled="false"
+        android:icon="@drawable/ic_directions_black_24dp"
+        android:title=""
+        app:actionLayout="@layout/menuitem_routes_spinner" />
+
+    <item android:title="@string/gen_menu_title">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menItm_drwLyt_today"
+                    android:icon="@drawable/ic_local_atm_black_24dp"
+                    android:title="@string/todaypayments_menu_title" />
+
+                <item
+                    android:id="@+id/menItm_drwLyt_pending"
+                    android:icon="@drawable/ic_attach_money_black_24dp"
+                    android:title="@string/pendingcredits_menu_title" />
+
+                <item
+                    android:id="@+id/menItm_drwLyt_customers"
+                    android:icon="@drawable/ic_group_black_24dp"
+                    android:title="@string/customers_menu_title" />
+
+                <item
+                    android:id="@+id/menItm_drwLyt_credits"
+                    android:icon="@drawable/ic_business_center_black_24dp"
+                    android:title="@string/credits_menu_title" />
+
+                <item
+                    android:id="@+id/menItm_drwLyt_order"
+                    android:icon="@drawable/ic_file_swap"
+                    android:title="@string/routeorder_menu_title" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/gen_menu_more">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menItm_drwLyt_logout"
+                    android:icon="@drawable/ic_cancel_black_24dp"
+                    android:title="@string/gen_logout" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

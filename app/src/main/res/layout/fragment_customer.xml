@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context="com.cristiancollazos.paybird.view.fragment.CustomerFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/progressbar_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:foreground="@color/indigoblue_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:text="@string/customers_info_title"
+                android:textAlignment="center" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lblCustomerDocumentType"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/spCustomerDocumentType"
+                            android:layout_alignStart="@+id/spCustomerDocumentType"
+                            android:layout_marginBottom="@dimen/inverse_minimal_padding"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:text="@string/customers_documenttype" />
+
+                        <Spinner
+                            android:id="@+id/spCustomerDocumentType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/etlCustomerDocument"
+                            android:layout_alignTop="@+id/etlCustomerDocument"
+                            android:layout_below="@+id/lblCustomerDocumentType" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/etlCustomerDocument"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lblCustomerDocumentType"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_toEndOf="@+id/spCustomerDocumentType">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/etCustomerDocument"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="0123456789-"
+                                android:hint="@string/customers_document"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:nextFocusDown="@+id/etCustomerName" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCustomerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/customers_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/etCustomerLastName" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCustomerLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/customers_lastname"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/etCustomerAddres" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/minimal_padding">
+
+                        <TextView
+                            android:id="@+id/lblCustomerCity"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/spCustomerCity"
+                            android:layout_alignStart="@+id/spCustomerCity"
+                            android:layout_marginBottom="@dimen/inverse_minimal_padding"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:text="@string/customers_city" />
+
+                        <Spinner
+                            android:id="@+id/spCustomerCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lblCustomerCity" />
+
+                        <TextView
+                            android:id="@+id/lblCustomerNeighborhood"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/spCustomerNeighborhood"
+                            android:layout_alignStart="@+id/spCustomerNeighborhood"
+                            android:layout_marginBottom="@dimen/inverse_minimal_padding"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_toEndOf="@+id/lblCustomerCity"
+                            android:text="@string/customers_neighborhood" />
+
+                        <Spinner
+                            android:id="@+id/spCustomerNeighborhood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/spCustomerCity"
+                            android:layout_alignTop="@+id/spCustomerCity"
+                            android:layout_below="@+id/lblCustomerCity"
+                            android:layout_toEndOf="@+id/spCustomerCity" />
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCustomerAddres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/customers_address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/etCustomerPhone" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/minimal_padding"
+                            android:layout_weight="0.5">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/etCustomerPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="0123456789+"
+                                android:drawablePadding="@dimen/minimal_padding"
+                                android:drawableStart="@drawable/ic_call_black_24dp"
+                                android:hint="@string/customers_phone"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etCustomerMobile" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_weight="0.5">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/etCustomerMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="0123456789+"
+                                android:drawablePadding="@dimen/minimal_padding"
+                                android:drawableStart="@drawable/ic_smartphone_black_24dp"
+                                android:hint="@string/customers_mobile"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etCustomerCompanyName" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lblCustomerRoutes"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/spCustomerRoutes"
+                            android:layout_alignStart="@+id/spCustomerRoutes"
+                            android:layout_marginBottom="@dimen/inverse_minimal_padding"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:text="@string/customers_route" />
+
+                        <Spinner
+                            android:id="@+id/spCustomerRoutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lblCustomerRoutes" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/progressbar_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:foreground="@color/indigoblue_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:text="@string/customers_companyinfo_title"
+                android:textAlignment="center" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCustomerCompanyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/customers_company_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/etCustomerCompanyAddress" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCustomerCompanyAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/customers_company_address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/etCustomerCompanyPhone" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lblCustomerCompanyCity"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/spCustomerCompanyCity"
+                            android:layout_alignStart="@+id/spCustomerCompanyCity"
+                            android:layout_marginBottom="@dimen/inverse_minimal_padding"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:text="@string/customers_company_city" />
+
+                        <Spinner
+                            android:id="@+id/spCustomerCompanyCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/etlCustomerCompanyPhone"
+                            android:layout_alignTop="@+id/etlCustomerCompanyPhone"
+                            android:layout_below="@id/lblCustomerCompanyCity" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/etlCustomerCompanyPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lblCustomerCompanyCity"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_toEndOf="@+id/spCustomerCompanyCity">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/etCustomerCompanyPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="0123456789+"
+                                android:drawablePadding="@dimen/minimal_padding"
+                                android:drawableStart="@drawable/ic_call_black_24dp"
+                                android:hint="@string/customers_company_phone"
+                                android:inputType="number" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btnCustomerSave"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:paddingEnd="@dimen/dividersidebutton"
+                android:paddingStart="@dimen/dividersidebutton"
+                android:text="@string/customers_dosave" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

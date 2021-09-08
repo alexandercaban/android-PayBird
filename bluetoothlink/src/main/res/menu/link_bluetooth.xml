@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/actBTRefresh"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/refresh"
+        android:title="@string/menu_recargar_bt"/>
+    
+    <item
+        android:id="@+id/actBTPowerOn"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@drawable/power_on"
+        android:title="@string/menu_encender_bt"/>
+    
+    <item
+        android:id="@+id/actBTConnectToDevice"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/add_plus"
+        android:title="@string/menu_vincular_bt"/>
+</menu>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_FullName"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_marginBottom="@dimen/minimal_padding"
+        android:text="Nombre del cliente" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_DocumentLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_FullName"
+        android:text="@string/customers_document" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_Document"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_FullName"
+        android:layout_marginStart="@dimen/minimal_padding"
+        android:layout_toEndOf="@+id/tvCustomerInfo_DocumentLabel"
+        android:text="XXXXXX" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_AddressLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_DocumentLabel"
+        android:text="@string/customers_address" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_Address"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvCustomerInfo_Document"
+        android:layout_below="@id/tvCustomerInfo_Document"
+        android:layout_toEndOf="@+id/tvCustomerInfo_AddressLabel"
+        android:text="XXXXXX" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_NeighborhoodLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_AddressLabel"
+        android:text="@string/customers_neighborhood" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_Neighborhood"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvCustomerInfo_Document"
+        android:layout_below="@id/tvCustomerInfo_Address"
+        android:layout_toEndOf="@+id/tvCustomerInfo_NeighborhoodLabel"
+        android:text="XXXXXX" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_CityLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_NeighborhoodLabel"
+        android:text="@string/customers_city" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_City"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvCustomerInfo_Document"
+        android:layout_below="@id/tvCustomerInfo_Neighborhood"
+        android:layout_toEndOf="@+id/tvCustomerInfo_CityLabel"
+        android:text="XXXXXX" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_ContactLabel"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerInfo_CityLabel"
+        android:text="@string/customers_company_phone" />
+
+    <TextView
+        android:id="@+id/tvCustomerInfo_Contact"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvCustomerInfo_Document"
+        android:layout_below="@id/tvCustomerInfo_City"
+        android:layout_toEndOf="@+id/tvCustomerInfo_ContactLabel"
+        android:text="XXXXXX" />
+
+</RelativeLayout>

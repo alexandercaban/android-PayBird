@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlChooseDateHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigoblue_primary"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:drawableStart="@drawable/ic_date_range_white_24dp"
+            android:ellipsize="end"
+            android:text="@string/todaypayments_choosedate"
+            android:textColor="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <CalendarView
+        android:id="@+id/calvChooseDateDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlChooseDateHeader" />
+
+    <LinearLayout
+        android:id="@+id/llChooseDateButtonBar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calvChooseDateDialog"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnChooseDate_Cancel"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_cancel_button" />
+
+        <Button
+            android:id="@+id/btnChooseDate_Confirm"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_confirm_button" />
+
+    </LinearLayout>
+
+</RelativeLayout>

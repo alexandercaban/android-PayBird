@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlPayDialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/indigoblue_primary"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tvPayDialog_Title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:drawableStart="@drawable/ic_local_atm_white_24dp"
+            android:ellipsize="end"
+            android:text="Titulo"
+            android:textColor="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPayments_PrinterDisconnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPayDialogHeader"
+        android:background="@color/indigoblue_accent_red"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_disconnected_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPayments_PrinterConnecting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPayments_PrinterDisconnected"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_connecting_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPayments_PrinterConnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPayments_PrinterConnecting"
+        android:background="@color/indigoblue_accent_green"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_connected_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llPayDialog_ButtonBar"
+        android:layout_below="@+id/rlPayments_PrinterConnected">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etlPayDialog_ValueToPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPayDialog_ValueToPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:hint="@string/todaypayments_dopay_value"
+                    android:inputType="number"
+                    android:textAlignment="textEnd" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvPayDialog_NextPaymentTitle"
+                style="@style/Base.TextAppearance.AppCompat.Tooltip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etlPayDialog_ValueToPay"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:text="@string/todaypayments_dopay_nextpayment" />
+
+            <CalendarView
+                android:id="@+id/dpPayDialog_NextPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPayDialog_NextPaymentTitle" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llPayDialog_ButtonBar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPayDialog_Cancel"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_cancel_button" />
+
+        <Button
+            android:id="@+id/btnPayDialog_Confirm"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_confirm_button" />
+
+    </LinearLayout>
+
+</RelativeLayout>

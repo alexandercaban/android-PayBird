@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_light">#efebe9</color>
+    <color name="drawer_background_center">#eaeaea</color>
+    <color name="drawer_background_end">#d4d4d4</color>
+    <color name="drawer_background_start">#ffffff</color>
+    <color name="indigoblue_accent">#448AFF</color>
+    <color name="indigoblue_accent_alter">#4e7ac2</color>
+    <color name="indigoblue_accent_red">#FF5252</color>
+    <color name="indigoblue_divider">#BDBDBD</color>
+    <color name="indigoblue_icons">#FFFFFF</color>
+    <color name="indigoblue_loading_background">#50ffffff</color>
+    <color name="indigoblue_primary">#3F51B5</color>
+    <color name="indigoblue_primary_dark">#303F9F</color>
+    <color name="indigoblue_primary_light">#C5CAE9</color>
+    <color name="indigoblue_primary_text">#212121</color>
+    <color name="indigoblue_secondary_text">#757575</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_middle_horizontal_margin">8dp</dimen>
+    <dimen name="activity_middle_vertical_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="cardview_actions_padding">8dp</dimen>
+    <dimen name="cardview_content_padding">16dp</dimen>
+    <dimen name="cardview_corner_radio">2dp</dimen>
+    <dimen name="cardview_elevation_high">2dp</dimen>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="dividersidebutton">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_size_mini">48dp</dimen>
+    <dimen name="fab_size_plus_margin">88dp</dimen>
+    <dimen name="fragment_padding">16dp</dimen>
+    <dimen name="inverse_activity_horizontal_margin">-16dp</dimen>
+    <dimen name="inverse_minimal_padding">-8dp</dimen>
+    <dimen name="minimal_padding">8dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="progressbar_height">3dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <string name="app_name" translatable="false">BluetoothLink</string>
+    <string name="bluetooth_no_disponible" translatable="false">Bluetooth no disponible</string>
+    <string name="err_impresora_no_asociada" translatable="false">No hay dispositivo asociado</string>
+    <string name="err_not_connect_bluetooth_socket" translatable="false">No hay conexión con el dispositivo bluetooth</string>
+    <string name="loading_devices" translatable="false">Cargando dispositivos</string>
+    <string name="menu_encender_bt" translatable="false">Encender bluetooth</string>
+    <string name="menu_recargar_bt" translatable="false">Actualizar</string>
+    <string name="menu_vincular_bt" translatable="false">Vincular dispositivo</string>
+    <string name="no_hay_disp_bluetooth" translatable="false">No hay dispositivos bluetooth vinculados</string>
+    <string name="reimprimir" translatable="false">Desea imprimir una copia?</string>
+    <style name="IndigoBlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/indigoblue_primary</item>
+        <item name="colorPrimaryDark">@color/indigoblue_primary_dark</item>
+        <item name="colorAccent">@color/indigoblue_accent</item>
+    </style>
+    <style name="IndigoBlueTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="IndigoBlueTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="IndigoBlueTheme.NoActionBarMain">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="IndigoBlueTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="IndigoBlueTheme.TextShadowEffect">
+        <item name="android:textColor">@color/indigoblue_primary_dark</item>
+        <item name="android:shadowColor">@color/indigoblue_icons</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+</resources>

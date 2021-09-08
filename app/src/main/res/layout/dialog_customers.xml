@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigoblue_primary">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_toStartOf="@+id/btnCustomerDialog_Filter"
+            android:drawablePadding="@dimen/activity_vertical_margin"
+            android:drawableStart="@drawable/ic_people_white_24dp"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="@string/customers_menu_title"
+            android:textColor="@color/indigoblue_icons" />
+
+        <ImageButton
+            android:id="@+id/btnCustomerDialog_Filter"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/fab_size_mini"
+            android:layout_height="@dimen/fab_size_mini"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:src="@drawable/ic_search_black_24dp"
+            android:tint="@color/indigoblue_icons" />
+
+        <ImageButton
+            android:id="@+id/btnCustomerDialog_CancelFilter"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/fab_size_mini"
+            android:layout_height="@dimen/fab_size_mini"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:src="@drawable/ic_clear_white_24dp"
+            android:tint="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvCustomersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rlCustomerDialog_NO_CUSTOMERS_FOUND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCustomerDialog_NO_CUSTOMERS_FOUND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/fab_toolbar_size"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:src="@drawable/ic_error_outline_black_24dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCustomerDialog_NO_CUSTOMERS_FOUND"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/customersdialog_nodatafound"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

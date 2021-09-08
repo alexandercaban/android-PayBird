@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/minimal_padding"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/minimal_padding">
+
+    <TextView
+        android:id="@+id/tvCreditMovement_DateHour"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX/XX/XXXX XX:XX:XX"
+        android:textColor="@color/indigoblue_primary_text" />
+
+    <FrameLayout
+        android:id="@+id/flCreditMovement_Div2"
+        android:layout_width="@dimen/divider"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvCreditMovement_DateHour"
+        android:layout_alignTop="@+id/tvCreditMovement_DateHour"
+        android:layout_marginEnd="@dimen/minimal_padding"
+        android:layout_marginStart="@dimen/minimal_padding"
+        android:layout_toEndOf="@+id/tvCreditMovement_DateHour"
+        android:background="@color/indigoblue_divider" />
+
+    <TextView
+        android:id="@+id/tvCreditMovement_Value"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="XXXXXXX"
+        android:textColor="@color/indigoblue_accent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCreditMovement_Status"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/flCreditMovement_Div2"
+        android:layout_toStartOf="@+id/tvCreditMovement_Value"
+        android:text="XXXXXXX" />
+
+</RelativeLayout>

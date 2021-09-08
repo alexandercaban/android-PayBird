@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.playtechla.bluetoothlink.LinkBluetoothDeviceActivity">
+
+    <FrameLayout
+        android:id="@+id/flHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_size"
+        android:background="@color/indigoblue_primary">
+
+        <TextView
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:drawableStart="@drawable/ic_bluetooth_white_24dp"
+            android:text="@string/menu_vincular_bt"
+            android:textColor="@color/indigoblue_icons" />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lstBTDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flHeader" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnExit"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_arrow_back_white_24dp" />
+
+</RelativeLayout>

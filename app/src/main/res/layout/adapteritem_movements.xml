@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvMovementItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/cardview_elevation_high"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:longClickable="true"
+    tools:context=".view.adapter.PendingPaymentAdapter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvMovement_DateHour"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="DD/MM/YYYY HH:MI:SS"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMovement_Customer"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvMovement_DateHour"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="CLIENTE"
+            android:textColor="@color/indigoblue_primary_text" />
+
+        <TextView
+            android:id="@+id/tvMovement_CreditCode"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvMovement_Customer"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:drawablePadding="@dimen/minimal_padding"
+            android:drawableStart="@drawable/ic_local_atm_black_24dp"
+            android:gravity="center_vertical"
+            android:text="CLIENTE"
+            android:textAlignment="gravity" />
+
+        <FrameLayout
+            android:id="@+id/flMovement_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@color/indigoblue_accent"
+            android:paddingBottom="@dimen/cardview_corner_radio"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/minimal_padding"
+            android:paddingTop="@dimen/cardview_corner_radio">
+
+            <TextView
+                android:id="@+id/tvMovement_Type"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIPO"
+                android:textAllCaps="true"
+                android:textColor="@color/indigoblue_icons" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvMovement_Value"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvMovement_Customer"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/minimal_padding"
+            android:layout_toEndOf="@+id/tvMovement_CreditCode"
+            android:text="VALOR"
+            android:textAlignment="textEnd" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

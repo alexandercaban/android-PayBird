@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="loading_devices" translatable="false">Cargando dispositivos</string>
+    <string name="bluetooth_no_disponible" translatable="false">Bluetooth no disponible</string>
+    <string name="no_hay_disp_bluetooth" translatable="false">No hay dispositivos bluetooth vinculados</string>
+
+    <string name="app_name" translatable="false">BluetoothLink</string>
+    <string name="reimprimir" translatable="false">Desea imprimir una copia?</string>
+    <string name="menu_recargar_bt" translatable="false">Actualizar</string>
+    <string name="menu_encender_bt" translatable="false">Encender bluetooth</string>
+    <string name="menu_vincular_bt" translatable="false">Vincular dispositivo</string>
+
+    <string name="err_not_connect_bluetooth_socket" translatable="false">No hay conexión con el dispositivo bluetooth</string>
+    <string name="err_impresora_no_asociada" translatable="false">No hay dispositivo asociado</string>
+
+</resources>

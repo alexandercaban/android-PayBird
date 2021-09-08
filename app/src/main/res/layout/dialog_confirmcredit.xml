@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/indigoblue_accent">
+
+    <RelativeLayout
+        android:id="@+id/rlConfirmCredit_PrinterDisconnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/indigoblue_accent_red"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_disconnected_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlConfirmCredit_PrinterConnecting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlConfirmCredit_PrinterDisconnected"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_connecting_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlConfirmCredit_PrinterConnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlConfirmCredit_PrinterConnecting"
+        android:background="@color/indigoblue_accent_green"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/gen_printer_connected_prompt"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvConfirmCredit_Prompt"
+        android:layout_below="@+id/rlConfirmCredit_PrinterConnected">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/confirmcredit_summary"
+                android:textAlignment="center"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Customer"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Title"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:drawablePadding="@dimen/minimal_padding"
+                android:drawableStart="@drawable/ic_person_white_24dp"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XXXX XXXXXX XXXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_CreatedLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Created"
+                android:layout_alignTop="@+id/tvConfirmCredit_Created"
+                android:layout_below="@+id/tvConfirmCredit_Customer"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Created"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_creditdate"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Created"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Customer"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XX/XX/XXXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_DueLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Due"
+                android:layout_alignTop="@+id/tvConfirmCredit_Due"
+                android:layout_below="@+id/tvConfirmCredit_CreatedLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Created"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_duedate"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Due"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Created"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XX/XX/XXXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_LengthLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Length"
+                android:layout_alignTop="@+id/tvConfirmCredit_Length"
+                android:layout_below="@+id/tvConfirmCredit_DueLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Length"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_duration"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Length"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Due"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_PeriodLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Period"
+                android:layout_alignTop="@+id/tvConfirmCredit_Period"
+                android:layout_below="@+id/tvConfirmCredit_LengthLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Period"
+                android:gravity="center_vertical"
+                android:text="@string/creditinfo_period"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Period"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Length"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XXXXXXXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_NextPaymentLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_NextPayment"
+                android:layout_alignTop="@+id/tvConfirmCredit_NextPayment"
+                android:layout_below="@+id/tvConfirmCredit_PeriodLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_NextPayment"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_nextpayment"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_NextPayment"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Period"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XX/XX/XXXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/flConfirmCredit_Div1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_below="@+id/tvConfirmCredit_NextPayment"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginTop="@dimen/minimal_padding"
+                android:background="@color/indigoblue_divider" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_CreditValueLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_CreditValue"
+                android:layout_alignTop="@+id/tvConfirmCredit_CreditValue"
+                android:layout_below="@+id/flConfirmCredit_Div1"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_CreditValue"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_value"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_CreditValue"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/flConfirmCredit_Div1"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="$ XXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_InterestLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Interest"
+                android:layout_alignTop="@+id/tvConfirmCredit_Interest"
+                android:layout_below="@+id/tvConfirmCredit_CreditValueLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Interest"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_interest"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Interest"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_CreditValueLabel"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="XX.X"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_RemainderLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvConfirmCredit_Remainder"
+                android:layout_alignTop="@+id/tvConfirmCredit_Remainder"
+                android:layout_below="@+id/tvConfirmCredit_InterestLabel"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvConfirmCredit_Remainder"
+                android:gravity="center_vertical"
+                android:text="@string/createcredit_remainder"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_Remainder"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Interest"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="$ XXX"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_QuantityInstallment"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvConfirmCredit_Remainder"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:text="@string/confirmcredit_quantityinstallment"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/flConfirmCredit_Div2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_below="@+id/tvConfirmCredit_QuantityInstallment"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/indigoblue_divider" />
+
+            <TextView
+                android:id="@+id/tvConfirmCredit_PromptOrder"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flConfirmCredit_Div2"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/minimal_padding"
+                android:text="@string/confirmcredit_pickorder"
+                android:textAlignment="center"
+                android:textColor="@color/indigoblue_icons" />
+
+            <Spinner
+                android:id="@+id/spConfirmCredit_Order"
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvConfirmCredit_PromptOrder"
+                android:layout_marginTop="@dimen/minimal_padding"
+                android:backgroundTint="@color/indigoblue_icons"
+                tools:targetApi="lollipop" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvConfirmCredit_Prompt"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llConfirmCreditDialog_ButtonBar"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/minimal_padding"
+        android:text="@string/confirmcredit_prompt"
+        android:textAlignment="center"
+        android:textColor="@color/indigoblue_icons" />
+
+    <LinearLayout
+        android:id="@+id/llConfirmCreditDialog_ButtonBar"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnConfirmCreditDialog_Cancel"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_cancel_button"
+            android:textColor="@color/indigoblue_icons" />
+
+        <Button
+            android:id="@+id/btnConfirmCreditDialog_Confirm"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/gen_dialog_confirm_button"
+            android:textColor="@color/indigoblue_icons" />
+
+    </LinearLayout>
+
+</RelativeLayout>

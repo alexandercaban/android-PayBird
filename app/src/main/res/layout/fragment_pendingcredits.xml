@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context="com.cristiancollazos.paybird.view.fragment.PendingCreditsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlPendingCredits_Subheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnPendingCredits_FilterByCreditCode"
+            android:layout_alignTop="@id/btnPendingCredits_FilterByCreditCode"
+            android:layout_toStartOf="@id/btnPendingCredits_FilterByCreditCode"
+            android:gravity="center_vertical"
+            android:text="@string/pendingcredits_filtes"
+            android:textAlignment="gravity"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnPendingCredits_FilterByCreditCode"
+            android:layout_alignTop="@+id/btnPendingCredits_FilterByCreditCode"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:layout_toStartOf="@id/btnPendingCredits_FilterByCreditCode"
+            android:background="@color/indigoblue_divider" />
+
+        <ImageButton
+            android:id="@+id/btnPendingCredits_FilterByCreditCode"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnPendingCredits_FilterByCustomer"
+            android:src="@drawable/ic_local_atm_gray_24dp" />
+
+        <FrameLayout
+            android:layout_width="@dimen/divider"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnPendingCredits_FilterByCreditCode"
+            android:layout_alignTop="@+id/btnPendingCredits_FilterByCreditCode"
+            android:layout_marginBottom="@dimen/minimal_padding"
+            android:layout_marginTop="@dimen/minimal_padding"
+            android:layout_toStartOf="@id/btnPendingCredits_FilterByCustomer"
+            android:background="@color/indigoblue_divider" />
+
+        <ImageButton
+            android:id="@+id/btnPendingCredits_FilterByCustomer"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_people_gray_24dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srvPendingCredits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlPendingCredits_Subheader">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvPendingCredits"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rlPendingCredits_NO_DATA_FOUND"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvPendingCredits_NO_DATA_FOUND"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/ic_error_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPendingCredits_NO_DATA_FOUND"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/pendingcredits_nodatafound"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

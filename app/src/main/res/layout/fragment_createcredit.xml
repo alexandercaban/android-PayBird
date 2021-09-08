@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <RelativeLayout
+        android:id="@+id/rlCreateCredit_CustomerDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigoblue_primary_dark">
+
+        <TextView
+            android:id="@+id/tvCreateCredit_Customer"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_toStartOf="@+id/btnCreateCredit_CustomerInfo"
+            android:drawablePadding="@dimen/minimal_padding"
+            android:drawableStart="@drawable/ic_person_white_24dp"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Cliente"
+            android:textAlignment="gravity"
+            android:textColor="@color/indigoblue_icons" />
+
+        <ImageButton
+            android:id="@+id/btnCreateCredit_CustomerInfo"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:tint="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svCreateCredit_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlCreateCredit_CustomerDiv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/cardview_corner_radio"
+                android:layout_marginStart="@dimen/cardview_corner_radio"
+                android:layout_marginTop="@dimen/minimal_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCreateCredit_DatesDiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/btnCreateCredit_PickCreateDate"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/btnCreateCredit_PickCreateDate"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_CreateDateLabel"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/createcredit_creditdate"
+                            android:textColor="@color/indigoblue_secondary_text" />
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_CreateDate"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_toEndOf="@+id/tvCreateCredit_CreateDateLabel"
+                            android:text="XX/XX/XXXX"
+                            android:textColor="@color/indigoblue_primary_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_DueDateLabel"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/tvCreateCredit_CreateDateLabel"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/tvCreateCredit_CreateDateLabel"
+                            android:text="@string/createcredit_duedate"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/indigoblue_secondary_text" />
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_DueDate"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCreateCredit_CreateDate"
+                            android:layout_marginStart="@dimen/minimal_padding"
+                            android:layout_toEndOf="@+id/tvCreateCredit_DueDateLabel"
+                            android:text="XX/XX/XXXX"
+                            android:textColor="@color/indigoblue_primary_text"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnCreateCredit_PickCreateDate"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="@dimen/fab_size_mini"
+                        android:layout_height="@dimen/fab_size_mini"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_marginStart="@dimen/minimal_padding"
+                        android:layout_toEndOf="@+id/rlCreateCredit_DatesDiv"
+                        android:src="@drawable/ic_date_range_white_24dp" />
+
+                    <Button
+                        android:id="@+id/btnCreateCredit_PickDuration"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fab_size_mini"
+                        android:layout_toEndOf="@+id/btnCreateCredit_PickCreateDate"
+                        android:text="@string/createcredit_duration_value" />
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/btnCreateCredit_PickDuration"
+                        android:layout_alignStart="@+id/btnCreateCredit_PickDuration"
+                        android:layout_below="@+id/btnCreateCredit_PickDuration"
+                        android:paddingEnd="@dimen/minimal_padding"
+                        android:paddingStart="@dimen/minimal_padding"
+                        android:text="@string/createcredit_duration"
+                        android:textAlignment="center"
+                        android:textColor="@color/indigoblue_secondary_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCreateCredit_ValuesDiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/cardview_corner_radio"
+                android:layout_marginStart="@dimen/cardview_corner_radio"
+                android:layout_marginTop="@dimen/minimal_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCreateCredit_Value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:drawablePadding="@dimen/minimal_padding"
+                            android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                            android:hint="@string/createcredit_value"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:nextFocusDown="@+id/etCreateCredit_Interest"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCreateCredit_Interest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789."
+                            android:drawablePadding="@dimen/minimal_padding"
+                            android:drawableStart="@drawable/ic_percent_black_24dp"
+                            android:hint="@string/createcredit_interest"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:nextFocusDown="@+id/etCreateCredit_Remainder"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etCreateCredit_Remainder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="0123456789"
+                            android:drawablePadding="@dimen/minimal_padding"
+                            android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                            android:hint="@string/createcredit_remainder"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCreateCredit_PeriodDiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/cardview_corner_radio"
+                android:layout_marginStart="@dimen/cardview_corner_radio"
+                android:layout_marginTop="@dimen/minimal_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <ImageButton
+                        android:id="@+id/btnCreateCredit_PickNextPaymentDate"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="@dimen/fab_size_mini"
+                        android:layout_height="@dimen/fab_size_mini"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_marginStart="@dimen/minimal_padding"
+                        android:src="@drawable/ic_date_range_white_24dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlCreateCredit_NextPaymentDiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_alignTop="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_NextPaymentDateLabel"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/createcredit_nextpayment"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/indigoblue_secondary_text" />
+
+                        <TextView
+                            android:id="@+id/tvCreateCredit_NextPaymentDate"
+                            style="@style/TextAppearance.AppCompat.Body1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/tvCreateCredit_NextPaymentDateLabel"
+                            android:layout_alignStart="@+id/tvCreateCredit_NextPaymentDateLabel"
+                            android:layout_below="@+id/tvCreateCredit_NextPaymentDateLabel"
+                            android:text="XX/XX/XXXX"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/indigoblue_primary_text"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:id="@+id/flCreateCredit_PeriodDiv"
+                        android:layout_width="@dimen/divider"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_alignTop="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/rlCreateCredit_NextPaymentDiv"
+                        android:background="@color/indigoblue_divider" />
+
+                    <Spinner
+                        android:id="@+id/spCreateCredit_Period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/btnCreateCredit_PickNextPaymentDate"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/flCreateCredit_PeriodDiv" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/minimal_padding"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tvCreateCredit_Dummy1"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/minimal_padding"
+                        android:text="@string/createcredit_installmentsummary_title"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCreateCredit_Dummy2"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tvCreateCredit_Dummy1"
+                        android:text="XX"
+                        android:textColor="@color/indigoblue_primary_text" />
+
+                    <TextView
+                        android:id="@+id/tvCreateCredit_Dummy3"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCreateCredit_Dummy1"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/tvCreateCredit_Dummy2"
+                        android:text="@string/createcredit_installments_quantity"
+                        android:textColor="@color/indigoblue_secondary_text" />
+
+                    <FrameLayout
+                        android:id="@+id/flCreateCredit_Dummy4"
+                        android:layout_width="@dimen/divider"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tvCreateCredit_Dummy3"
+                        android:layout_alignTop="@+id/tvCreateCredit_Dummy3"
+                        android:layout_below="@+id/tvCreateCredit_Dummy1"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/tvCreateCredit_Dummy3"
+                        android:background="@color/indigoblue_divider" />
+
+                    <TextView
+                        android:id="@+id/flCreateCredit_Dummy5"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCreateCredit_Dummy1"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/flCreateCredit_Dummy4"
+                        android:text="$ XXX"
+                        android:textColor="@color/indigoblue_primary_text" />
+
+                    <TextView
+                        android:id="@+id/flCreateCredit_Dummy6"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCreateCredit_Dummy1"
+                        android:layout_marginEnd="@dimen/minimal_padding"
+                        android:layout_toStartOf="@+id/flCreateCredit_Dummy5"
+                        android:text="@string/createcredit_installments_value"
+                        android:textColor="@color/indigoblue_secondary_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvCreateCredit_InstallmentsDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:cardBackgroundColor="@color/indigoblue_accent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/tvCreateCredit_SummaryTitle"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/minimal_padding"
+                android:text="@string/createcredit_installmentsummary_title"
+                android:textColor="@color/indigoblue_icons" />
+
+            <TextView
+                android:id="@+id/tvCreateCredit_InstallmentQuantity"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvCreateCredit_SummaryTitle"
+                android:text="XX"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreateCredit_InstallmentQuantityLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvCreateCredit_InstallmentQuantity"
+                android:layout_alignTop="@+id/tvCreateCredit_InstallmentQuantity"
+                android:layout_below="@+id/tvCreateCredit_SummaryTitle"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvCreateCredit_InstallmentQuantity"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/divider"
+                android:text="@string/createcredit_installments_quantity"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+            <FrameLayout
+                android:id="@+id/flCreateCredit_InstallmentDiv"
+                android:layout_width="@dimen/divider"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvCreateCredit_InstallmentQuantityLabel"
+                android:layout_alignTop="@+id/tvCreateCredit_InstallmentQuantityLabel"
+                android:layout_below="@+id/tvCreateCredit_SummaryTitle"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvCreateCredit_InstallmentQuantityLabel"
+                android:background="@color/indigoblue_divider" />
+
+            <TextView
+                android:id="@+id/tvCreateCredit_InstallmentValue"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCreateCredit_SummaryTitle"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/flCreateCredit_InstallmentDiv"
+                android:text="$ XXX"
+                android:textColor="@color/indigoblue_icons"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreateCredit_InstallmentValueLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvCreateCredit_InstallmentQuantity"
+                android:layout_alignTop="@+id/tvCreateCredit_InstallmentQuantity"
+                android:layout_below="@+id/tvCreateCredit_SummaryTitle"
+                android:layout_marginEnd="@dimen/minimal_padding"
+                android:layout_toStartOf="@+id/tvCreateCredit_InstallmentValue"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/divider"
+                android:text="@string/createcredit_installments_value"
+                android:textAlignment="gravity"
+                android:textColor="@color/indigoblue_icons" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

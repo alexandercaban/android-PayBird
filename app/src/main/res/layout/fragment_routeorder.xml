@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context="com.cristiancollazos.paybird.view.fragment.RouteOrderFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlRouteOrder_Subheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/indigoblue_primary_dark"
+        android:paddingBottom="@dimen/cardview_corner_radio"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/cardview_corner_radio">
+
+        <TextView
+            android:id="@+id/tvRouteOrder_Subtitle"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="@string/routeorder_menu_subtitle"
+            android:textAlignment="center"
+            android:textColor="@color/indigoblue_icons"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srvRouteOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlRouteOrder_Subheader">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvRouteOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rlRouteOrder_NO_DATA_FOUND"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvRouteOrder_NO_DATA_FOUND"
+                    android:layout_centerHorizontal="true"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/ic_error_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvRouteOrder_NO_DATA_FOUND"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/routeorder_nodatafound"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

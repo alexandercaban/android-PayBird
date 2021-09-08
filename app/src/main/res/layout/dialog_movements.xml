@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigoblue_primary">
+
+        <TextView
+            android:id="@+id/tvMovementDialog_Title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/minimal_padding"
+            android:drawablePadding="@dimen/activity_vertical_margin"
+            android:drawableStart="@drawable/ic_attach_money_white_24dp"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="@string/creditmovements_title"
+            android:textColor="@color/indigoblue_icons" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMovementsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rlMovementsDialog_NO_CUSTOMERS_FOUND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivMovementsDialog_NO_CUSTOMERS_FOUND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/fab_toolbar_size"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:src="@drawable/ic_error_outline_black_24dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivMovementsDialog_NO_CUSTOMERS_FOUND"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/creditmovements_nodatafound"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
